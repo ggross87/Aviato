@@ -73,3 +73,6 @@ CARD STYLES
 .tabs{
     overflow-x: hidden;
 }
+input#location, input#company-search, input#query {
+    padding: 0;
+}
