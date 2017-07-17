@@ -66,7 +66,7 @@ function generateSearchResults(apiData) {
       "</div>"
     ];
     output = output.join("");
-    $(".resultCards").append(output);
+    $(".resultCards,#meetups ").append(output);
   }
   // Show the first card
   showNextCard();
