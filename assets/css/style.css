@@ -11,7 +11,6 @@ h2 {
 }
 
 .icon {
-  margin-right: 20px;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
@@ -21,9 +20,11 @@ h2 {
 
 .allTabs {
   margin-top: 5px;
+
 }
 
 .heart {
+
   font-size: 1.5rem;
   transition: all .3s linear !important;
 }
@@ -79,22 +80,22 @@ CARD STYLES
   width: 100%;
   min-width: 100%;
 }
-.job .card {}
+
 .job .card .card-content {
   height: 300px;
 }
-.job .card .card-content h4 {
+.job .card .card-content h4, .meetup .card .card-content h4 {
   font-size: 1rem;
   text-transform: uppercase;
 }
-.job .card .card-content p {
+.job .card .card-content p, .meetup .card .card-content p {
   margin-top: 1rem;
 }
 .job .card .likeButton i, .dislikeButton i {
   font-size: 4rem;
   transition: color .3s linear;
 }
-.job .card .likeButton i {
+.job .card .likeButton i  {
   float: right;
 }
 .job .card .likeButton i:hover {
