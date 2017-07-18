@@ -1,7 +1,13 @@
 //This code is for the search bar animations
 $(document).ready(function() {
   //jquery goes inside
-
+  $('input[name=Comanda]')
+  .click(
+       function ()
+       {
+           $(this).hide();
+       }
+  );
 
 });
   // Section 1

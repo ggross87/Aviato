@@ -1,3 +1,4 @@
+
 /* ====================================
 VARIABLES
 ======================================= */
@@ -119,7 +120,7 @@ $(document).ready(function() {
     var id = this.closest(".job");
     id = $(id).attr("id");
     animateOffScreen(id, "left");
-    
+
 
     //////////////// local storage and moving card to myjobspage
 
