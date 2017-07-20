@@ -22,16 +22,40 @@
   <header>
     <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo center">Jobiato</a>
+      <a href="#" class="brand-logo center"><img id="jobiatoLogo" src="./assets/images/jobiato.jpg"></img></a>
+
     </div>
   </nav>
   </header>
   <main>
 
-      <div class="container">
-        <!--Search-->
+    <!--Login-->
+    <div class="container signInForm" id="googleSignInPage">
+      <h2>Log in</h2>
+      <input id="txtEmail" type="email" placeholder="Email">
+      <input type="password" id="txtPassword" placeholder="password">
+      <button id="btnLogin" class="btn btn-action">
+        Log in
+      </button>
+      <button id="btnSignUp" class="btn btn-secondary">
+        Sign Up
+      </button>
 
+
+
+    <!-- Log in with Google -->
+
+      <button class="btn waves-effect waves-light theSignInButton" onclick = "googleSignin()">Google Signin</button>
+       <!-- signInForm -->
+      </div>
+
+      <!--Search-->
+      <div class="container hide">
+        <button id="btnLogout" class="btn btn-action hide">
+          Log out
+        </button>
         <div class="searchBar">
+          <h2>Search for jobs and events</h2>
           <!--Row and form containing all content-->
           <div class="row">
             <form action="#" id="searchForm" class="col s12">
@@ -56,7 +80,7 @@
                   </select>
                 </div>
                 <div class="input-field col s6">
-                  <button class="btn black waves-effect waves-light" type="submit" name="action">Submit
+                  <button class="btn waves-effect waves-light theSubmitButton" type="submit" name="action">Submit
                     <i class="material-icons right">send</i>
                   </button>
                 </div>
@@ -64,56 +88,62 @@
             </form>
           </div>
         </div>
+      </div>
 
       <!--Tab Titles and styling-->
-      <div class="row allTabs">
-        <div class="col s12 m12 l12">
-          <ul class="tabs">
-            <li class="tab col s4 tabs-fixed-width"><a class="active" href="#jobs">Jobs</a></li>
-            <li class="tab col s4 tabs-fixed-width"><a href="#meetups">Meetups</a></li>
-            <!-- <li class="col l4 m4 s4"></li> -->
-
-            <li class="col pageSwitcher s4 right-align">
-              <div id="myJobsLabel">My <span>Jobs</span><i class="fa fa-heart heart icon black-text"></i></div>
-              <div id="mySearchLabel">Search<i class="fa fa-search search icon black-text"></i></div>
-            </li>
-          </ul>
-        </div>
+      <div class="container hide">
+        <div class="row allTabs">
+          <div class="col s12">
+            <ul class="tabs">
+              <li class="tab col s3 "><a class="active" href="#jobs">Jobs</a></li>
+              <li class="tab col s3 "><a href="#meetups">Meetups</a><span id="meetUpNumbers">1</span></li>
+              <span id="pageToggle">
+                <li class="col s6 right-align hide search">Search <i class="material-icons ">search</i></li>
+                <li class="col s6 right-align heart">My Jobs <i class="fa fa-heart  icon"><span id="myJobsCounter"></span></i></li>
+              </span>
+            </ul>
+          </div>
+        </div> <!-- allTabs -->
       </div>
 
       <!--Jobs Tab Start-->
-      <div id="jobs" class="col s12">
-      <h2>Results</h2>
+      <div id="jobs">
+
       <!--Navbar-->
 
 
 
+
+
         <!--Result Cards-->
+        <div class="container">
           <div class="resultCards"></div>
+          <!-- <button class="btn btn-action loadMore hide right">Load More</button> -->
+        </div>
+
+        <!--Load More Jobs Button -->
 
         <!--My Jobs Page-->
+        <div class="container">
           <div class="myJobsPage hide"></div>
-
-
-
-      </div>
-
-      <!--Meetups Tab-->
-      <div id="meetups" class="col s12">
-        <nav class="white">
-          <div class="nav-wrapper">
-            <a href="#!" class="brand-logo center"></a>
-            <ul class="right">
-              <li><i class="material-icons icon search black-text">search</i></li>
-              <li><i class="material-icons icon heart black-text">view_module</i></li>
-            </ul>
-          </div>
-        </nav>
+        </div>
 
 
       </div>
 
-  </div> <!-- main .container -->
+        <!--Meetups Tab-->
+        <div class="container">
+          <div id="meetups"></div>
+        </div>
+
+
+
+
+
+
+
+
+
   </main>
 
   <!--Footer-->
@@ -124,16 +154,20 @@
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <!-- jQuery UI -->
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-
+  <!-- Moment.JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
   <!-- Materiablize JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
   <!--Javascript-->
+  <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+
   <script type="text/javascript" src="assets/javascript/javascript.js"></script>
   <script src="./assets/javascript/meetup.js"></script>
   <script src="./assets/javascript/cards.js"></script>
-  <script type="text/javascript" src="./assets/javascript/localStorage.js">
+  <!--<script type="text/javascript" src="./assets/javascript/localStorage.js"></script>-->
+  <script type="text/javascript" src="assets/javascript/firebaseAuth.js?ver=1.4"></script>
 
-  </script>
+
 
 </body>
 

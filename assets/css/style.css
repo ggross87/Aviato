@@ -1,3 +1,25 @@
+html {
+  background: url() no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.btn, .btn-large {
+    text-decoration: none;
+    color: #fff;
+    background-color: #1770aa;
+    text-align: center;
+    letter-spacing: .5px;
+    transition: .2s ease-out;
+    cursor: pointer;
+    margin: 2px;
+}
+
+nav, footer.page-footer {
+  background-color: #1770aa;
+}
 * {
   box-sizing: border-box;
 }
@@ -7,7 +29,7 @@ h1{
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .icon {
@@ -15,7 +37,10 @@ h2 {
   padding-right: 10px;
   padding-bottom: 10px;
   padding-top: 11px;
-  cursor: pointer;
+}
+
+#btnLogout {
+  float: right;
 }
 
 .allTabs {
@@ -23,32 +48,37 @@ h2 {
 
 }
 
+#pageToggle {
+  padding: 5px;
+}
+
+#pageToggle>li {
+  padding: 0 0 0 .75rem;
+  font-size: 1rem;
+}
+
+#pageToggle {
+  text-transform: uppercase;
+
+}
+
+#pageToggle, #pageToggle i {
+  cursor: pointer;
+  color: #37474f !important;
+  padding-right: 0 !important;
+}
+
+#pageToggle:hover, #pageToggle i:hover {
+  color: #ee6e73;
+}
+
+li.search i {
+  position: relative;
+  bottom: -7px;
+}
+
 .heart {
-
-  font-size: 1.5rem;
-  transition: all .3s linear !important;
-}
-
-.search {
-  font-size: 1.5rem;
-  display: none;
-  transition: all .3s linear !important;
-}
-
-#myEventsLabel {
-  display: none;
-}
-
-.heart:hover, .search:hover {
-  color: #ee6e73 !important;
-  background-color: #ffffff !important;
-}
-
-ul.tabs>li.pageSwitcher {
-  padding-right: 0;
-}
-ul.tabs>li.pageSwitcher>i {
-  margin-right: 0;
+  font-size: 20px;
 }
 
 #jobs, #meetups {
@@ -59,8 +89,26 @@ ul.tabs>li.pageSwitcher>i {
   padding-left: 0;
 }
 
+.signInForm {
+  margin-bottom: 3rem;
+}
+
+.searchBar {
+  /*margin-top: 3rem;*/
+}
+
 #searchSubmit {
   /*display: none;*/
+}
+
+#myJobsCounter {
+  margin-left: 10px;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #ee6e73;
+}
+
+.loadMore {
+  margin-bottom: 30px;
 }
 
 /* ==============================
@@ -95,8 +143,13 @@ CARD STYLES
   font-size: 4rem;
   transition: color .3s linear;
 }
+.job .card .dislikeButton i {
+  color: #f44336;
+}
+
 .job .card .likeButton i  {
   float: right;
+  color: #4caf50;
 }
 .job .card .likeButton i:hover {
   color: #388e3c !important;
@@ -107,4 +160,10 @@ CARD STYLES
 
 .tabs{
     overflow-x: hidden;
+}
+
+#jobiatoLogo {
+  height: 65px;
+  width: 190px;
+  border-radius: 5px;
 }
